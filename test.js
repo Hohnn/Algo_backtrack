@@ -1,6 +1,6 @@
 let sodu = [null,null,null,
-            null,3,null,
-            null,null,null]
+            null,null,null,
+            null,null,3]
 
 const initArray = []
 let array = []
@@ -36,7 +36,7 @@ for (let i = 0; i < array.length; i++) {
     const row = array[i];
     for (let ii = 0; ii < array[i].length; ii++) {
         console.log("🚀 ~ file: test.js ~ line 81 ~ ii", ii)
-        if (goBack) ii = 0
+        /* if (goBack) ii = 0 */
         const nbRow = array[i][ii]
 
         if (nbRow == null) {
@@ -75,25 +75,13 @@ for (let i = 0; i < array.length; i++) {
                                 console.log("🚀 ~ file: test.js ~ line 86 ~ initArray", initArray)
 
                                 array[i][ii - 1] = null
-                                ii--
                             } else if (initArray[i][ii - 2] === null && ii - 2 >= 0) {
                                 console.log("🚀 ~ file: test.js ~ line 86 ~ initArray", initArray)
                                 array[i][ii - 2] = null
-                                ii--
-                            } else if (ii - 1 == 0 && i - 1 >= 0) {
-                                array[i - 1][2] = null
-                                ii--
-                                i--
-                            } else if (ii - 2 == 0 && i - 1 >= 0) {
-                                array[i - 1][2] = null
-                                ii--
-                                i--
-                            } else if (i - 1 == 0) {
-                                ii = 3
-                                i = 3
-                            }
-                            console.log("🚀 ~ file: test.js ~ line 81 ~ ii", ii)
+                            } 
+                            ii = 0
 
+                            console.log("🚀 ~ file: test.js ~ line 81 ~ ii", ii)
 
                         }
                     }
